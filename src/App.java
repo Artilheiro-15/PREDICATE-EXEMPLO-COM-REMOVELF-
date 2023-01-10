@@ -18,9 +18,7 @@ public class App {
     double min = 100.0;
     //esse valor da vareavel min poderia einclusivel digitado pelo o usuario
 
-    Predicate<Product> pred = p -> p.getPrice() >= min;
-
-    list.removeIf(pred);
+    list.removeIf(p -> p.getPrice() >= min);
 
     for (Product p : list) {
       System.out.println(p);
